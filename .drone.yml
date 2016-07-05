@@ -27,4 +27,4 @@ publish:
     repo: hypriot/rpi-alpine-scratch
     tag: 
       - latest
-      - v3.2
+      - v3.4
