@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-[ $(id -u) -eq 0 ] || {
+[ "$(id -u)" -eq 0 ] || {
   printf >&2 '%s requires root\n' "$0"
   exit 1
 }
@@ -13,7 +13,7 @@ usage() {
 tmp() {
   TMP=$(mktemp -d /tmp/alpine-docker-XXXXXXXXXX)
   ROOTFS=$(mktemp -d /tmp/alpine-docker-rootfs-XXXXXXXXXX)
-  trap "rm -rf $TMP $ROOTFS" EXIT TERM INT
+  trap 'rm -rf $TMP $ROOTFS' EXIT TERM INT
 }
 
 apkv() {
@@ -23,7 +23,7 @@ apkv() {
 }
 
 getapk() {
-  curl -s $REPO/$ARCH/apk-tools-static-$(apkv).apk |
+  curl -s $REPO/$ARCH/apk-tools-static-"$(apkv)".apk |
     tar -xz -C $TMP sbin/apk.static
 }
 
