@@ -4,7 +4,7 @@ test:
 	true
 
 image:
-	./mkimage-alpine.sh
+	sudo ./mkimage-alpine.sh
 	docker build -t $(IMAGE) .
 
 push-image:
