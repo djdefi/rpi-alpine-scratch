@@ -73,6 +73,7 @@ REL=${REL:-v3.7}
 MIRROR=${MIRROR:-http://nl.alpinelinux.org/alpine}
 SAVE=${SAVE:-0}
 REPO=$MIRROR/$REL/main
+COMMUNITY=$MIRROR/$REL/community
 ARCH=armhf
 #ARCH=$(uname -m)
 TAG=djdefi/rpi-alpine
@@ -87,6 +88,8 @@ mkbase
 echo -e "config\n\n"
 echo $REPO
 echo "$REPO" > $ROOTFS/etc/apk/repositories
+echo $COMMUNITY
+echo "$COMMUNITY" > $ROOTFS/etc/apk/repositories
 #conf
 
 echo -e "pack\n\n"
