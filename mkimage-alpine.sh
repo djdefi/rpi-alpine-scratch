@@ -89,7 +89,7 @@ echo -e "config\n\n"
 echo $REPO
 echo "$REPO" > $ROOTFS/etc/apk/repositories
 echo $COMMUNITY
-echo "$COMMUNITY" > $ROOTFS/etc/apk/repositories
+echo "$COMMUNITY" >> $ROOTFS/etc/apk/repositories
 #conf
 
 echo -e "pack\n\n"
