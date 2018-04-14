@@ -1,3 +1,4 @@
+sudo: 'required'
 # first execute the test suite.
 # after the test execution is done and didn't
 # fail, build the images (if this step fails
