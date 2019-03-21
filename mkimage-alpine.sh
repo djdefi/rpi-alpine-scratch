@@ -69,7 +69,7 @@ while getopts "hr:m:s" opt; do
   esac
 done
 
-REL=${REL:-v3.7}
+REL=${REL:-v3.9}
 MIRROR=${MIRROR:-http://nl.alpinelinux.org/alpine}
 SAVE=${SAVE:-0}
 REPO=$MIRROR/$REL/main
